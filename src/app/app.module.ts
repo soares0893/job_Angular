@@ -15,11 +15,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ScriptsComponent } from './components/scripts/scripts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeadersComponent
+    HeadersComponent,
+    ScriptsComponent
   ],
   imports: [
     BrowserModule,
