@@ -16,12 +16,14 @@ import { MatListModule } from '@angular/material/list';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ScriptsComponent } from './components/scripts/scripts.component';
+import { HomeComponent } from './components/views/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadersComponent,
-    ScriptsComponent
+    ScriptsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
