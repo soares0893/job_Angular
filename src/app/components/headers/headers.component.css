@@ -1,0 +1,16 @@
+.header {
+
+}
+
+.title {
+    margin-right: auto;
+}
+
+.menu {
+    margin-left: auto;
+}
+
+button {
+    background-color: white;
+    margin: 0 10px;
+}
