@@ -11,8 +11,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select'; 
 
 import { HttpClientModule } from '@angular/common/http';
 import { ScriptsComponent } from './components/scripts/scripts.component';
@@ -33,7 +35,9 @@ import { HomeComponent } from './components/views/home/home.component';
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
+    MatSelectModule,
     MatInputModule,
+    MatCheckboxModule,
     MatCardModule,
     MatListModule,
     HttpClientModule
