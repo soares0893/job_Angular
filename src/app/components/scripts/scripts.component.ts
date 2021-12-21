@@ -40,45 +40,56 @@ export class ScriptsComponent implements OnInit {
     let text = "";
 
     const allInputs = document.querySelectorAll("input") as NodeListOf<HTMLInputElement>;
-    const allP = document.querySelectorAll("p") as NodeListOf<HTMLInputElement>;
+    const allLabels = document.querySelectorAll("label") as NodeListOf<HTMLLabelElement>;
     const textArea = document.querySelector("#exams") as HTMLInputElement;
     let n:number = 0;
 
-    console.log(allP.length)
-    console.log(allInputs.length)
-
-    for(let i = 0; i < allP.length; i++) {
-      if(allP[i].innerHTML == "Exames") {
+    for(let i = 0; i < allLabels.length; i++) {
+      if(allLabels[i].innerHTML == "Exames") {
         text += `Exames: ${textArea.value} || `;
         n--;
+      } else if(allInputs[n].type == "checkbox") {
+        if(allInputs[n].checked) {
+          text += `${allLabels[i].innerHTML}: Sim || `;
+        } else {
+          text += `${allLabels[i].innerHTML}: Não || `;
+        }
       } else {
-        text += `${allP[i].innerHTML}: ${allInputs[n].value} || `;
+        text += `${allLabels[i].innerHTML}: ${allInputs[n].value} || `;
       }
       n++;
     }
     
     navigator.clipboard.writeText(text);
-    window.alert(text);
   }
 
-  clear() {
+  clear(e:any) {
     const allInputs = document.querySelectorAll("input") as NodeListOf<HTMLInputElement>;
+    
+    this.dataComplements = [];
+    e.value = "Informações Gerais";
+
     for(let i = 0; i < allInputs.length; i++) {
       allInputs[i].value = "";
     }
 
     const textArea = document.querySelector("#exams") as HTMLInputElement;
     textArea.value = "";
+
   }
 
   generateInputs(e: any) {
+    this.dataComplements = [];
+
+    if(e.value != "Informações Gerais") {
+      this.dataComplements.push(["input",'Indicação Clínica'], ["input",'Convênio'], ["input",'Peso'], ["input",'Preparos']);
+    }
+
     for(let i = 0; i < this.dataSelect.length; i++) {
       if(this.dataSelect[i][0] == e.value && this.dataSelect[i][0] != 'Métodos de Imagems') {
-        this.dataComplements = [];
         for(let j = 1; j < this.dataSelect[i].length; j++) {
           this.dataComplements.push(this.dataSelect[i][j])
         }
-        console.log(this.dataComplements)
       }
     }
   }
@@ -87,3 +98,5 @@ export class ScriptsComponent implements OnInit {
   
 
 }
+
+//#3f51b5;

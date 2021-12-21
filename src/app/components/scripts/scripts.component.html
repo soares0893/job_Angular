@@ -4,27 +4,31 @@
         <h2 class="title">Novo Atendimento</h2>
         <span class="buttons">
             <button (click)="copy()" mat-icon-button color="primary"><mat-icon>file_copy</mat-icon></button>
-            <button (click)="clear()" mat-icon-button color="accent"><mat-icon>clear</mat-icon></button>
+            <button (click)="clear($event.target)" mat-icon-button color="accent"><mat-icon>clear</mat-icon></button>
         </span>
     </div>
 
-    <p>Nome</p>
+    <label for="name">Nome</label>
     <input type="text" id="name" autocomplete="off">
-    <p>Exames</p>
+
+    <label for="exams">Exames</label>
     <textarea id="exams" autocomplete="off"></textarea>
 
     <select (change)="generateInputs($event.target)">
         <option *ngFor="let item of dataSelect" value={{item[0]}}>{{item[0]}}</option>
     </select>
 
-    <div *ngFor="let item of dataComplements">
-        <span *ngIf="item[0] == 'checkbox'">
-            <p><input style="width: 20px;" type={{item[0]}}> {{item[1]}}</p>
-        </span>
-        <span *ngIf="item[0] == 'input'">
-            <p>{{item[1]}}</p>
-            <input type={{item[0]}} id={{item[1]}} autocomplete="off">
-        </span>
+    <div class="complements">
+        <div *ngFor="let item of dataComplements">
+            <span *ngIf="item[0] == 'checkbox'">
+                <input style="width: 20px;" id={{item[1]}} type={{item[0]}}>
+                <label for={{item[1]}}>{{item[1]}}</label>
+            </span>
+            <span *ngIf="item[0] == 'input'">
+                <label for={{item[1]}}>{{item[1]}}</label>
+                <input type={{item[0]}} id={{item[1]}} autocomplete="off">
+            </span>
+        </div>
     </div>
 
 </mat-card>
