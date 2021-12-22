@@ -10,21 +10,21 @@ export class ScriptsComponent implements OnInit {
   dataSelect = [
     ['Informações Gerais'], 
     ['Métodos de Imagems'], 
-    [['Ressonância Magnética'], ["input",'Senha'], ["checkbox",'Alergia'], ["checkbox",'Fobia'], ["checkbox",'Metal'], ["checkbox",'Marca-passo'], ["checkbox",'Ap. Ortod.'], ["checkbox",'Cirurgia'], ["checkbox",'Gestante']], 
-    ['RM de Mamas', ["input",'Senha'], ["input",'Pac. Menst.'], ["input",'CA Familiar'], ["checkbox",'Fobia'], ["checkbox",'Metal'], ["checkbox",'Marca-passo'], ["checkbox",'Gestante'], ["checkbox",'Cirurgia']], 
-    ['Ressonância Cardíaca', ["input",'Telefone'], ["input",'Senha'], ["input",'E-mail']], 
-    ['ArtroRM', ["input",'Senha'], ["checkbox",'Fobia'], ["checkbox",'Bronquite'], ["checkbox",'Asma'], ["checkbox",'Diabetes'], ["checkbox",'Metal'], ["checkbox",'Cirurgia']], 
-    ['Tomografia Comput.', ["input",'Senha'], ["checkbox",'Bronquite'], ["checkbox",'Asma'], ["checkbox",'Diabete'], ["checkbox",'Alergia'], ["checkbox",'Prob. F(renal)'], ["checkbox",'Cirurgia'], ["checkbox",'Gestante']], 
-    ['PET CT/Scan Oncológico', ["input",'Senha'], ["input",'Quimiot.'], ["input",'Radiot.'], ["input",'Diabetes'], ["checkbox",'Prob. F(renal)'], ["checkbox",'Asma']], 
-    ['AngioTC Coronariana', ["input",'Senha'], ["checkbox",'Bronquite'], ["checkbox",'Asma'], ["checkbox",'Diabete'], ["checkbox",'Alergia'], 'Arritmia', ["checkbox",'Prob. F(renal)']],
-    ['Medicina Nuclear', ["input",'Senha'], ["checkbox",'Gestante']],
-    ['SISREG', ["input",'Chave'], ["input",'Data/Unid.'], ["input",'CNS'], ["checkbox",'Alergia'], ["checkbox",'Fobia'], ["checkbox",'Metal'], ["checkbox",'Marca-passo'], ["checkbox",'Clipe Aneurisma'], ["checkbox",'Ap. Ortod.'], ["checkbox",'Cirurgia'], ["checkbox",'Gestante']], 
-    ['SER', ["input",'Chave Aut.'], ["input",'Data'], ["input",'Unidade'], ["input",'CNS'], ["input",'Nº Solic.']], 
-    ['Biopsia', ["input",'Senha']],
-    ['Teste Resp. Carb. 14 H. Pylory', ["input",'Senha']], 
-    ['Prova F(Pulmonar)', ["input",'Senha']], 
-    ['Marcação Pré-cirúrgica', ["input",'Telefone'], ["input",'Data'],["input", 'Convênio'], ["input",'Autorização']],
-    ['Paciente Int.', ["input",'Senha'], ["input",'Motivo'], ["input",'Setor Internado'], ["input",'Senha Internação'], ["input",'Hospital'], ["input",'Tel. Hospital'], ["input",'Lúcido, Orientado, Conciênte'], ["input",'Lig. Equipamento(s)'], ["input",'Precausão de Contato']]
+    [['Ressonância Magnética'], ["input",'Senha', 'rms'], ["checkbox",'Alergia','RMA'], ["checkbox",'Fobia','RMF'], ["checkbox",'Metal','RMM'], ["checkbox",'Marca-passo','RMMP'], ["checkbox",'Ap. Ortod.','RMAO'], ["checkbox",'Cirurgia','RMC'], ["checkbox",'Gestante','RMG']], 
+    ['RM de Mamas', ["input",'Senha','mas'], ["input",'Pac. Menst.','mam'], ["input",'CA Familiar','mamca'], ["checkbox",'Fobia','manfo'], ["checkbox",'Metal','manme'], ["checkbox",'Marca-passo','manmar'], ["checkbox",'Gestante','manges'], ["checkbox",'Cirurgia','mancir']], 
+    ['Ressonância Cardíaca', ["input",'Telefone', 'carte'], ["input",'Senha','cars'], ["input",'E-mail','care']], 
+    ['ArtroRM', ["input",'Senha','ars'], ["checkbox",'Fobia','arf'], ["checkbox",'Bronquite','arbr'], ["checkbox",'Asma','aras'], ["checkbox",'Diabetes','ardia'], ["checkbox",'Metal','arme'], ["checkbox",'Cirurgia','arcir']], 
+    ['Tomografia Comput.', ["input",'Senha','tose'], ["checkbox",'Bronquite','tobro'], ["checkbox",'Asma','tpoas'], ["checkbox",'Diabete','todia'], ["checkbox",'Alergia','toale'], ["checkbox",'Prob. F(renal)','topro'], ["checkbox",'Cirurgia','tocir'], ["checkbox",'Gestante','toges']], 
+    ['PET CT/Scan Oncológico', ["input",'Senha','pets'], ["input",'Quimiot.','petqui'], ["input",'Radiot.','petra'], ["input",'Diabetes','petdia'], ["checkbox",'Prob. F(renal)','petprob'], ["checkbox",'Asma','petas']], 
+    ['AngioTC Coronariana', ["input",'Senha','angios'], ["checkbox",'Bronquite','angiobron'], ["checkbox",'Asma','angioas'], ["checkbox",'Diabete','angiodia'], ["checkbox",'Alergia','angioaler'], ['checkbox','Arritmia','angioarr'], ["checkbox",'Prob. F(renal)','angiopro']],
+    ['Medicina Nuclear', ["input",'Senha','meds'], ["checkbox",'Gestante','medges']],
+    ['SISREG', ["input",'Chave','sischa'], ["input",'Data/Unid.','sisda'], ["input",'CNS','siscns'], ["checkbox",'Alergia','sisale'], ["checkbox",'Fobia','sisfob'], ["checkbox",'Metal','sisme'], ["checkbox",'Marca-passo','sismar'], ["checkbox",'Ap. Ortod.','sisap'], ["checkbox",'Cirurgia','siscir'], ["checkbox",'Gestante','sisges']], 
+    ['SER', ["input",'Chave Aut.','sercha'], ["input",'Data','serda'], ["input",'Unidade','serunid'], ["input",'CNS','sercns'], ["input",'Nº Solic.','sersol']], 
+    ['Biopsia', ["input",'Senha','bios']],
+    ['Teste Resp. Carb. 14 H. Pylory', ["input",'Senha','tests']], 
+    ['Prova F(Pulmonar)', ["input",'Senha','provs']], 
+    ['Marcação Pré-cirúrgica', ["input",'Telefone','martel'], ["input",'Data','marda'],["input", 'Convênio','marcon'], ["input",'Autorização','maraut']],
+    ['Paciente Int.', ["input",'Senha','pacssss'], ["input",'Motivo','pacmsss'], ["input",'Setor Internado','pacsisss'], ["input",'Senha Internação','pacseisss'], ["input",'Hospital','pachossss'], ["input",'Tel. Hospital','pacteho'], ["input",'Lúcido, Orientado, Conciênte','pacloc'], ["input",'Lig. Equipamento(s)','pacle'], ["input",'Precausão de Contato','pacpc']]
   ]
   
   dataComplements: any = [];
@@ -82,7 +82,7 @@ export class ScriptsComponent implements OnInit {
     this.dataComplements = [];
 
     if(e.value != "Informações Gerais") {
-      this.dataComplements.push(["input",'Indicação Clínica'], ["input",'Convênio'], ["input",'Peso'], ["input",'Preparos']);
+      this.dataComplements.push(["input",'Indicação Clínica','ic'], ["input",'Convênio','conv'], ["input",'Peso','pes'], ["input",'Preparos','preps']);
     }
 
     for(let i = 0; i < this.dataSelect.length; i++) {
@@ -90,6 +90,30 @@ export class ScriptsComponent implements OnInit {
         for(let j = 1; j < this.dataSelect[i].length; j++) {
           this.dataComplements.push(this.dataSelect[i][j])
         }
+      }
+    }
+  }
+
+  selectedInput(e: any) {
+    const inputId = e.id;
+    const labelByClass = document.querySelector('.'+inputId);
+    
+    if(e.value != '') {
+      if(labelByClass != null) {
+        //@ts-ignore
+        labelByClass.style.color = '#3f51b5'
+        //@ts-ignore
+        labelByClass.style.fontSize = '0.8em'
+        //@ts-ignore
+        e.style.fontSize = '1.2em'
+      }
+    }
+    if(e.value == '') {
+      if(labelByClass != null) {
+        //@ts-ignore
+        labelByClass.style.color = 'black'
+        //@ts-ignore
+        labelByClass.style.fontSize = '1em'
       }
     }
   }
