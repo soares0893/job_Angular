@@ -20,14 +20,14 @@
 
     <div class="complements">
         <div *ngFor="let item of dataComplements; let i = index">
-            <span *ngIf="item[0] == 'checkbox'">
-                <input style="width: 20px;" id={{item[1]}} type={{item[0]}}>
-                <label for={{item[1]}}>{{item[1]}}</label>
-            </span>
-            <span *ngIf="item[0] == 'input'">
+            <div class="inputCheckBox" *ngIf="item[0] == 'checkbox'">
+                <label class={{item[2]}} for={{item[2]}}>{{item[1]}}</label>
+                <input (click)="changeToText($event.target)" style="width: 20px;" id={{item[2]}} type={{item[0]}}>
+            </div>
+            <div *ngIf="item[0] == 'input'">
                 <label class={{item[2]}} for={{item[1]}}>{{item[1]}}</label>
                 <input (keyup)="selectedInput($event.target)" type={{item[0]}} id={{item[2]}} autocomplete="off">
-            </span>
+            </div>
         </div>
     </div>
 

@@ -118,8 +118,16 @@ export class ScriptsComponent implements OnInit {
     }
   }
 
-
-  
+  changeToText(e: any) {
+    if(e.type == "text") {
+      e.type = "checkbox"
+      e.style.width = "20px";
+      e.checked = false;
+    } else {
+      e.type = "text"
+      e.style.width = "70%";
+    }
+  }  
 
 }
 
