@@ -82,7 +82,7 @@ export class ScriptsComponent implements OnInit {
     this.dataComplements = [];
 
     if(e.value != "Informações Gerais") {
-      this.dataComplements.push(["input",'Indicação Clínica','ic'], ["input",'Convênio','conv'], ["input",'Peso','pes'], ["input",'Preparos','preps']);
+      this.dataComplements.push(["input",'Indicação Clínica','ic'], ["input",'Convênio','conv'], ["input",'Peso','pes'], ["input",'Preparos','preps'], ["input",'Pedido datado','pedata']);
     }
 
     for(let i = 0; i < this.dataSelect.length; i++) {
